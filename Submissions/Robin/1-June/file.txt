@@ -1,0 +1,3 @@
+Hi
+This is a test file with multiple lines
+For the testing purpose of 'file-reader.c' file.
