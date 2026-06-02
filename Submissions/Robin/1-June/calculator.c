@@ -2,14 +2,15 @@
 // Write a program that takes two numbers and an operator (+, -, *, /) and shows the result.
 
 #include<stdio.h>
+#include<stdlib.h>
 
 int main(){
-    int a,b,c;
+    long long int a,b,c;
     char o;
     printf("Enter val a: ");
-    scanf("%d",&a);
+    scanf("%lld",&a);
     printf("Enter val b: ");
-    scanf("%d",&b);
+    scanf("%lld",&b);
 
     printf("Enter operator (+, -, *, /): ");
     scanf(" %c",&o);
@@ -17,10 +18,11 @@ int main(){
     switch(o){
         case '+':
             c=a+b;
-            printf("Sum = %d",c);
             if(c<a || c<b){
                 exit(1);        // How can you protect you code from integer overflow, or how can you ic it?
-            }
+                printf("Error in input");           // Use long int or long long int
+            }                   
+            printf("Sum = %d",c);
             break;
 
         case '-':

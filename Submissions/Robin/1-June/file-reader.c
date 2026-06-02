@@ -15,6 +15,10 @@ int main(){
     // Is there any other way by which all the lines from the file are 
     // coppied into the buffer at once and then prints completely from the buffer.
 
+    // Use fread() to completely read the file into buffer and then use it from the buffer to perform operation
+    // But the rpoblem is that, if file size if big it need huge buffer size to store all the contents which requires more memory
+    // First use fstat() to know the size of the file and use that file size to declare buffer size
+
     fclose(fptr);
 
     return 0;
